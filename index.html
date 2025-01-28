@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="day3.css">
+</head>
+<body>
+    
+
+    monday  ----- "start your week strong!"
+    tuesday ----- "keep going"
+    wednesday --- "halfway there!"
+    thursday  --- "alomost the weekend "
+    friday   ---- "happy friday"
+    saturday
+    or sunday --- "enjoy your weekend "
+
+    <script>
+        let  day1=("monday")
+
+        switch(day1){
+            case "monday":console.log("day1 -- start your week strong!")
+            break;
+            case "monday":console.log("start your week strong!")
+        }
+    </script>
+    <script>
+        
+        let  day2=("tuesday")
+        switch(day2){
+            case "monday":console.log("start your week strong!")
+            case "tuesday":console.log("day2 -- keep going")
+            break;
+            case "wednesday":console.log("Half way there")
+        }
+    </script>
+    <script>
+        
+        let  day3=("wednesday")
+        switch(day3){
+            case "monday":console.log("start your week strong!")
+            case "tuesday":console.log("keep going")
+            case "wednesday":console.log("day3 -- Half way there")
+            break;
+            default :console.log("no match") 
+        }
+    </script>
+    <script>
+        
+        let  day4=("thursday")
+        switch(day4){
+            case "monday":console.log("start your week strong!")
+            case "tuesday":console.log("keep going")
+            case "wednesday":console.log("Half way there")
+            case "thursday" :console.log("day4 -- Almost the weekend")
+            break;
+            default :console.log("no match") 
+        }
+    </script>
+    <script>
+        
+        let  day5=("friday")
+        switch(day5){
+            case "monday":console.log("start your week strong!")
+            case "friday": console.log("day5 -- happy friday")
+        }
+    </script>
+    <script>
+        
+        let  day6=("saturday")
+        switch(day6){
+            case "monday":console.log("start your week strong!")
+            case "tuesday":console.log("keep going")
+            case "saturday":console.log("day6 -- Enjoy your weekkend ")
+        }
+    </script>
+    <script>
+        
+        let  day7=("sunday")
+        switch(day7){
+            case "sunday":console.log("day7 -- Enjoy your weekend")
+            
+        }
+    </script>
+    
+        <div class="container">
+            <h2>Discount Calculator</h2>
+            <div class="input-container">
+                <label for="purchaseAmount">Enter Purchase Amount ($):</label>
+                <input type="number" id="purchaseAmount" placeholder="Enter amount">
+            </div>
+            <button onclick="calculateDiscount()">Calculate Discount</button>
+            <div class="result" id="discountResult"></div>
+        </div>
+    
+        <script>
+            function calculateDiscount() {
+                const amount = parseFloat(document.getElementById('purchaseAmount').value);
+                let discountMessage = "";
+    
+                if (isNaN(amount) || amount <= 0) {
+                    discountMessage = "Please enter a valid purchase amount";
+                } else if (amount < 50) {
+                    discountMessage = "No discount";
+                } else if (amount >= 50 && amount <= 100) {
+                    discountMessage = "5% discount";
+                } else if (amount >= 101 && amount <= 200) {
+                    discountMessage = "10% discount";
+                } else {
+                    discountMessage = "15% discount";
+                }
+    
+                document.getElementById('discountResult').textContent = discountMessage;
+            }
+        </script>
+    
+             
+
+
+    
+</body>
+</html>
